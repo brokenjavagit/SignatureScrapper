@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SignatureScrapper"
+             x:Class="SignatureScrapper.MainPage">
+
+    <StackLayout>
+        <StackLayout VerticalOptions="StartAndExpand" 
+                     HorizontalOptions="CenterAndExpand"
+                     Padding="40">
+
+            <Entry Placeholder="Enter Url here" TextChanged="Entry_TextChanged" x:Name="URIEntry"/>
+
+            
+            <Label Text="" 
+                   x:Name="ImageString"/>
+            
+            <Label Text="{Binding Source={x:Reference CurrentImage}, Path=Width, StringFormat='Width :{0}'}"/>
+            <Label Text="{Binding Source={x:Reference CurrentImage}, Path=Height, StringFormat='Height :{0}'}"/>
+
+            <!--<Editor x:Name="StringEditor"/>-->
+            
+
+        </StackLayout>
+        <Image VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="CenterAndExpand"
+                   x:Name="CurrentImage"
+                   Scale="4"
+                   />
+        <StackLayout x:Name="BmpStack"
+                     Padding="10">
+            
+            
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" 
+                     VerticalOptions="EndAndExpand" 
+                     HorizontalOptions="CenterAndExpand">
+            
+            <Button Text="Prev" 
+                    HorizontalOptions="StartAndExpand"
+                    Clicked="OnPrevButtonClicked"/>
+            <Button Text="Next" 
+                    HorizontalOptions="EndAndExpand"
+                    Clicked="OnNextButtonClicked"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
