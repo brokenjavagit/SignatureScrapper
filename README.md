@@ -20,6 +20,7 @@ Things I Learned:
   1.  Reading from a stream into a buffer chunks at a time.
   2.  Xamarin does not like lots of labels use a list instead.
   3.  Make projects short.
+  4.  URI, URL, URN were reaserched for naming sake.
 
 Improvements:
   1.  Reading more than 1 chunk
